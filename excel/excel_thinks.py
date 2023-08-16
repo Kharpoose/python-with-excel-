@@ -1,13 +1,13 @@
 from openpyxl import Workbook, load_workbook
 
-wb = load_workbook('excel with python.xlsx')
+wb = load_workbook('excelwithpython.xlsx')
 ws = wb.active
 
 print(ws['A2'].value)
 ws['A2'].value = 'deneme'
 print(ws['A2'].value)
-ws['A3'].value = 'zazazasdasd'
-print(ws['A3'].value)
+print(wb.sheetnames)
 
+wb.create_sheet('Test1') #Create  new sheet wow
 
-wb.save('excel with python.xlsx')
+wb.save('excelwithpython.xlsx')
